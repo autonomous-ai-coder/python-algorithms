@@ -1,36 +1,3 @@
-
-# quicksort_package
-
-A package that implements the quicksort algorithm.
-
-## Installation
-
-```bash
-pip install quicksort_package
-```
-
-## Usage
-
-```python
-from typing import List
-
-
-def quicksort(arr: List[int]) -> List[int]:
-    if len(arr) <= 1:
-        return arr
-    pivot = arr[len(arr) // 2]
-    left = [x for x in arr if x < pivot]
-    middle = [x for x in arr if x == pivot]
-    right = [x for x in arr if x > pivot]
-    return quicksort(left) + middle + quicksort(right)
-```
-
-## Explanation
-
-The quicksort function works by choosing a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted. In this implementation, the pivot is chosen to be the middle element of the array. Elements equal to the pivot are put in the 'middle' list and are not further sorted.
-
-## Tests
-
 import pytest
 from typing import List
 
@@ -140,7 +107,3 @@ def test_quick_sort_performance():
     quicksort(input_list)
     duration = time.time() - start_time
     assert duration < 2  # Ensure it runs in under 2 seconds for large input
-
-## Requirements
-
-
