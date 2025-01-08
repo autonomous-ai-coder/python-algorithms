@@ -1,18 +1,20 @@
-## Pull Request Template
+# Pull Request Template
 
-### Description
-- What does this PR do?
-- What issue does it address?
+## Description
+Please include a summary of the changes and the related issue. 
 
-### Type of Change
-- [ ] Bugfix
+## Type of Change
+- [ ] Bug fix
 - [ ] New feature
 - [ ] Documentation update
 
-### How to Test
-- Describe how to test the changes made in this PR.
+## How Has This Been Tested?
+Please describe the tests that you ran to verify your changes.
 
-### Checklist
-- [ ] I have read the contributing guidelines.
-- [ ] I have added tests to cover my changes.
+## Checklist
+- [ ] My code follows the style guidelines of this project.
+- [ ] I have performed a self-review of my own code.
+- [ ] I have commented my code, particularly in hard-to-understand areas.
+- [ ] My changes generate no new warnings.
+- [ ] I have added tests that prove my fix is effective or that my feature works.
 - [ ] I have updated the documentation accordingly.
