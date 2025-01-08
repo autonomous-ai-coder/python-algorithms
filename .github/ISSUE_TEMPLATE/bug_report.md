@@ -9,22 +9,24 @@ assignees: ''
 ---
 name: Bug Report
 about: Create a report to help us improve
+title: 'Bug: [Brief description]'
+labels: bug
+
 ---
 
-## Bug Report
+## Description
+Please describe the bug you encountered.
 
-### Description
-- Describe the bug clearly and concisely.
+## Steps to Reproduce
+1. 
+2. 
+3. 
 
-### Expected Behavior
-- What did you expect to happen?
+## Expected Behavior
+What did you expect to happen?
 
-### Steps to Reproduce
-1. Step 1
-2. Step 2
-3. Step 3
+## Actual Behavior
+What actually happened?
 
-### Environment
-- OS:
-- Python version:
-
+## Additional Context
+Add any other context about the problem here.
