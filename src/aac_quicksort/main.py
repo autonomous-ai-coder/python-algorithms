@@ -1,0 +1,16 @@
+from typing import List
+
+def quicksort(arr: List[int]) -> List[int]:
+    """
+    Sorts an array of integers using the quicksort algorithm.
+
+    :param arr: List of integers to sort.
+    :return: New list of sorted integers.
+    """
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + middle + quicksort(right)
