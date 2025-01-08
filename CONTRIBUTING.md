@@ -1,18 +1,17 @@
 # Contributing to aac-quicksort
 
-We welcome contributions to enhance the aac-quicksort package! Please follow these guidelines:
+Thank you for considering contributing to aac-quicksort! We welcome contributions from everyone.
 
 ## How to Contribute
 1. Fork the repository.
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and ensure that your code passes all tests.
+4. Submit a pull request detailing your changes.
 
 ## Guidelines
 - Follow the existing code style.
-- Write clear commit messages.
-- Include tests for your changes.
-- Update documentation if necessary.
+- Write tests for any new functionality.
+- Update the documentation if necessary.
 
-Thank you for contributing!
+## Reporting Issues
+If you find a bug or have a feature request, please open an issue on GitHub.

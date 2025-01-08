@@ -1,26 +1,32 @@
 # aac-quicksort
 
-![Python](https://img.shields.io/badge/python-3.6%2B-blue.svg) ![Version](https://img.shields.io/badge/version-0.1.0-brightgreen.svg)
+![Python](https://img.shields.io/badge/python-3.6%2B-blue.svg)
+![Version](https://img.shields.io/badge/version-0.1.0-orange.svg)
 
 ## Description
-A Python package that implements the quicksort algorithm for sorting lists of integers.
+
+A package that implements the quicksort algorithm for sorting integers.
 
 ## Installation
-To install the package, use pip:
+
+You can install the package using pip:
 ```bash
 pip install aac-quicksort
 ```
 
 ## Usage
-To use the quicksort function, you can import it as follows:
+
+Here's how to use the quicksort function:
 ```python
 from aac_quicksort import quicksort
 
-sorted_list = quicksort([7, 5, 6, 4, 8])
-print(sorted_list)  # Output: [4, 5, 6, 7, 8]
+arr = [3, 6, 8, 10, 1, 2, 1]
+sorted_arr = quicksort(arr)
+print(sorted_arr)  # Output: [1, 1, 2, 3, 6, 8, 10]
 ```
 
 ## Test Results
+
 ✅ All tests passing
 
 ### Coverage
@@ -28,17 +34,16 @@ print(sorted_list)  # Output: [4, 5, 6, 7, 8]
 - Branches covered: 0.0%
 
 ### Test Cases
-- **Basic test with sorted data**  
-  **Input:** `sorted_data`  
-  **Expected:** `[4, 5, 6, 7, 8]`  
-- **Basic test with unsorted data**  
-  **Input:** `unsorted_data`  
-  **Expected:** `[4, 5, 6, 7, 8]`
+- Sort a basic list of integers  
+  - Input: `sorted_data`  
+  - Expected: `[1, 1, 2, 3, 6, 8, 10]`
+- Sort an empty list  
+  - Input: `empty_data`  
+  - Expected: `[]`
+- Sort a large list of integers  
+  - Input: `large_data`  
+  - Expected: `sorted list of 10000 to 1`
 
 ### Edge Cases
-- Empty list
-- Single element list
-- List with identical elements
-
-## License
-This project is licensed under the MIT License.
+- Empty list  
+- Very large list

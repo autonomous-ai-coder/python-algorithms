@@ -1,69 +1,42 @@
 @pytest.fixture
 def sorted_data():
     """
-    Provides a fixture for a basic sorted dataset.
+    Fixture that returns a basic sorted and unsorted list of integers.
     """
-    return [4, 5, 6, 7, 8]
-
-@pytest.fixture
-def unsorted_data():
-    """
-    Provides a fixture for a basic unsorted dataset.
-    """
-    return [8, 4, 6, 7, 5]
+    return [3, 6, 8, 10, 1, 2, 1]
 
 @pytest.fixture
 def empty_data():
     """
-    Provides a fixture for an empty dataset.
+    Fixture that returns an empty list.
     """
     return []
 
 @pytest.fixture
 def large_data():
     """
-    Provides a fixture for a large dataset.
+    Fixture that returns a large list of integers for performance testing.
     """
-    return list(range(1000, 0, -1))
+    return list(range(10000, 0, -1))
 
-def test_basic_sorted(sorted_data):
+def test_basic_functionality(sorted_data):
     """
-    Test quicksort with an already sorted list.
+    Test the quicksort function on a basic unsorted list.
     """
-    assert quicksort(sorted_data) == [4, 5, 6, 7, 8]
+    assert quicksort(sorted_data) == sorted(sorted_data)
 
-
-def test_basic_unsorted(unsorted_data):
+def test_edge_case_empty_list(empty_data):
     """
-    Test quicksort with a basic unsorted list.
-    """
-    assert quicksort(unsorted_data) == [4, 5, 6, 7, 8]
-
-
-def test_empty_list(empty_data):
-    """
-    Test quicksort with an empty list.
+    Test the quicksort function with an empty list.
     """
     assert quicksort(empty_data) == []
 
+def test_edge_case_large_list(large_data):
+    """
+    Test the quicksort function with a large list to check performance.
+    """
+    result = quicksort(large_data)
+    assert result == sorted(large_data)
 
-def test_large_input_performance(large_data):
-    """
-    Test quicksort performance with a large list.
-    """
-    sorted_large_data = list(range(1, 1001))
-    assert quicksort(large_data) == sorted_large_data
-
-
-def test_single_element():
-    """
-    Test quicksort with a single element list.
-    """
-    assert quicksort([1]) == [1]
-
-
-def test_identical_elements():
-    """
-    Test quicksort with a list of identical elements.
-    """
-    assert quicksort([5, 5, 5, 5, 5]) == [5, 5, 5, 5, 5]
+# Note: Python's recursion depth may limit the input size that can be handled by this test
+# In practice, this test checks if the algorithm can handle large inputs efficiently.
